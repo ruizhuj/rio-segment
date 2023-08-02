@@ -102,5 +102,5 @@ def watershed_segment(edges, footprint_size):
             footprint=morphology.disk(footprint_size),
             indices=False)
     markers, _ = ndi.label(markers)
-    segments = morphology.watershed(edges, markers)
+    segments = segmentation.watershed(edges, markers)
     return segments
